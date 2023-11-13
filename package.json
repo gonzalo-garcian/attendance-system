@@ -1,0 +1,27 @@
+{
+  "name": "attendance-system",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "tsc & node ./dir/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gonzalo-garcian/attendance-system"
+  },
+  "keywords": [
+    "Hapi",
+    "React",
+    "MongoDB",
+    "TypeScript",
+    "Node"
+  ],
+  "author": "gonzalo-garcian",
+  "license": "MIT",
+  "devDependencies": {
+    "@hapi/hapi": "^21.3.2",
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2"
+  }
+}
