@@ -131,3 +131,6 @@ dist
 
 #Jetbrains IDE
 .idea
+
+#HapiJS builds
+server/dir
