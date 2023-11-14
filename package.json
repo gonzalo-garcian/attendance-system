@@ -2,9 +2,9 @@
   "name": "attendance-system",
   "version": "0.0.0",
   "description": "",
-  "main": "src/main.js",
+  "main": "server/src/main.ts",
   "scripts": {
-    "test": "tsc & node ./dir/main.js"
+    "dev": "tsc & &node ./server/dir/main.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "@hapi/hapi": "^21.3.2",
+    "@hapi/inert": "^7.1.0",
     "@types/node": "^20.9.0",
     "typescript": "^5.2.2"
   }
