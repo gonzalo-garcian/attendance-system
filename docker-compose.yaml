@@ -1,0 +1,21 @@
+services:
+  server:
+    build:
+      context: ./server
+    container_name: attendance-system-server
+    ports:
+      - "4000:80"
+    environment:
+      - NODE_ENV=production
+    restart: always
+  client:
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    container_name: attendance-system-client
+    ports:
+      - "80:80"
+    depends_on:
+      - server
+    restart: always
+    
