@@ -1,13 +1,11 @@
 import Hapi, {Server} from "@hapi/hapi";
 import Inert from "@hapi/inert";
 import Jwt from "@hapi/jwt";
-import Path from "path";
 
 let server: Server;
 const init = async function (): Promise<Server> {
     server = Hapi.server({
-        port: 43742,
-        host: "localhost",
+        port: process.env.SERVER_PORT || 4000,
         routes: {
             cors: {
                 credentials: true,
@@ -20,13 +18,10 @@ const init = async function (): Promise<Server> {
 
     server.route({
         method: 'GET',
-        path: '/{path*}',
-        handler: {
-            directory: {
-                path: Path.join(__dirname, '../../client/dist/'),
-                listing: false,
-                index: true
-            }
+        path: '/',
+        handler: (request, h) => {
+
+            return 'Hello World!';
         }
     });
 
