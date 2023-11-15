@@ -1,8 +1,8 @@
 {
   "name": "attendance-system-server",
+  "private": true,
   "version": "0.0.0",
   "description": "",
-  "main": "src/main.ts",
   "scripts": {
     "build": "tsc && node dir/main.js"
   },
@@ -19,12 +19,13 @@
   ],
   "author": "gonzalo-garcian",
   "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2",
+    "@hapi/inert": "^7.1.0",
+    "@hapi/jwt": "^3.2.0"
+  },
   "devDependencies": {
     "@types/node": "^20.9.0",
     "typescript": "^5.2.2"
-  },
-  "dependencies": {
-    "@hapi/hapi": "^21.3.2",
-    "@hapi/inert": "^7.1.0"
   }
 }

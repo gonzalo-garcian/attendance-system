@@ -1,5 +1,6 @@
 import Hapi, {Server} from "@hapi/hapi";
 import Inert from "@hapi/inert";
+import Jwt from "@hapi/jwt";
 import Path from "path";
 
 let server: Server;
@@ -15,6 +16,7 @@ const init = async function (): Promise<Server> {
     });
 
     await server.register(Inert);
+    await server.register(Jwt);
 
     server.route({
         method: 'GET',
