@@ -1,4 +1,4 @@
-import Hapi, { Server } from "@hapi/hapi";
+import Hapi, {Server} from "@hapi/hapi";
 import Inert from "@hapi/inert";
 import Path from "path";
 
@@ -7,8 +7,8 @@ const init = async function (): Promise<Server> {
     server = Hapi.server({
         port: 43742,
         host: "localhost",
-        routes:{
-            cors:{
+        routes: {
+            cors: {
                 credentials: true,
             }
         }
@@ -21,7 +21,7 @@ const init = async function (): Promise<Server> {
         path: '/{path*}',
         handler: {
             directory: {
-                path: Path.join(__dirname, '../../client/build/'),
+                path: Path.join(__dirname, '../../client/dist/'),
                 listing: false,
                 index: true
             }
@@ -42,5 +42,4 @@ process.on('unhandledRejection', (err): void => {
     process.exit(1);
 });
 
-init()
-    .then(() => start());
+init().then(() => start());

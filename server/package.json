@@ -1,10 +1,10 @@
 {
-  "name": "attendance-system",
+  "name": "attendance-system-server",
   "version": "0.0.0",
   "description": "",
-  "main": "server/src/main.ts",
+  "main": "src/main.ts",
   "scripts": {
-    "dev": "tsc & &node ./server/dir/main.js"
+    "build": "tsc && node dir/main.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,11 @@
   "author": "gonzalo-garcian",
   "license": "MIT",
   "devDependencies": {
-    "@hapi/hapi": "^21.3.2",
-    "@hapi/inert": "^7.1.0",
     "@types/node": "^20.9.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2",
+    "@hapi/inert": "^7.1.0"
   }
 }
