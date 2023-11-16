@@ -1,5 +1,5 @@
 services:
-  server:
+  api:
     build:
       context: ./server
     container_name: attendance-system-server
@@ -16,6 +16,6 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - server
+      - api
     restart: always
     

@@ -18,7 +18,16 @@ const init = async function (): Promise<Server> {
 
     server.route({
         method: 'GET',
-        path: '/',
+        path: '/api/user/register',
+        handler: (request, h) => {
+
+            return 'Hello World!';
+        }
+    });
+
+    server.route({
+        method: 'GET',
+        path: '/api/user/login',
         handler: (request, h) => {
 
             return 'Hello World!';
